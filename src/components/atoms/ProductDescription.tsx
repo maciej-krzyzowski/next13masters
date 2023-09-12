@@ -9,7 +9,7 @@ export const ProduktDescription = ({ product }: IProps) => {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <span>{product.name}</span>
+        <h3>{product.name}</h3>
         <span>{changeCurrency(product.price / 100)}</span>
       </div>
       <div>{product.category}</div>
