@@ -1,4 +1,3 @@
-import { Row } from "antd";
 import { ProductCard } from "@/components/molecules/ProductCard";
 import { type ProductType } from "@/types/Product.type";
 
@@ -8,10 +7,13 @@ type IProps = {
 
 export const ProductList = ({ products }: IProps) => {
   return (
-    <Row gutter={[16, 16]} wrap={true} data-testid="products-list">
+    <ul
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      data-testid="products-list"
+    >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-    </Row>
+    </ul>
   );
 };
